@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>To-Do List App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Day display at the top with an icon and link -->
+        <div class="day-display" id="day-display">
+            <a href="https://www.google.com/search?q=calendar" target="_blank">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/calendar.png" alt="Calendar Icon" class="day-icon">
+            </a>
+            <span id="day-text">Today is </span> <!-- JavaScript will dynamically update this text -->
+        </div>
+         <!-- Timer Section -->
+        <div id="timer-section">
+            <p id="task-name"><b>Focus on:</b> <span id="active-task">None</span></p>
+            <p id="timer-display">25:00</p>
+            <button id="start-timer" onclick="startPomodoro()">Start Timer</button>
+            <button id="reset-timer" onclick="resetTimer()">Reset Timer</button>
+        </div>
+         
+        
+
+        <div class="todo-app">
+            <h2>To-Do List <img src="https://imgcdn.stablediffusionweb.com/2024/3/9/5b07779d-037a-4561-80cd-44f74cd04388.jpg" alt="To-Do Icon"></h2>
+            
+            <!-- Additional content inside todo-app can go here -->
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add your text">
+                <button onclick="addTask()">Add</button>
+            </div>
+            <ul id="list-container">
+               <!-- <li class="checked">Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li>-->
+            </ul>
+        </div>
+    </div>
+    <script src="script1.js">
+       
+    
+    </script>
+</body>
+</html>

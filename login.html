@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #7b4397, #dc2430);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 30px 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        .input-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .login-button {
+            background: #dc2430;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            font-size: 18px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-button:hover {
+            background: #b32029;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
+            </div>
+            <button type="button" class="login-button" onclick="login()">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function login() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // Simple validation (can be replaced with server-side authentication)
+            if (username === "Rocky" && password === "123@") {
+                alert("Login successful!");
+                localStorage.setItem("isLoggedIn", "true"); // Set login status in localStorage
+                window.location.href = "index1.html"; // Redirect to the correct page
+            } else {
+                alert("Invalid username or password. Try again.");
+            }
+        }
+    </script>
+</body>
+</html>

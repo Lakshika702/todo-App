@@ -1,0 +1,266 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Container Styles */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(13deg, #cc6496, #4e085f);
+    padding: 10px;
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    flex-direction: column; /* Stack the day-display and todo-app */
+}
+
+/* Day Display Styles */
+/* Day Display Styles */
+.day-display {
+    width: 50%;
+    background: linear-gradient(135deg, #6a1b9a, #8e24aa); /* Purple gradient */
+    color: white;
+    text-align: center;
+    padding: 15px 15px;  /* Adjust the padding around the text and icon */
+    font-size: 18px;  /* Adjust the font size of the text */
+    font-weight: bold;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Space between day display and other sections */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 70px; /* Set a fixed height for the bar */
+}
+
+/* Day Icon Styles */
+.day-icon {
+    width: 30px;  /* Adjust the size of the icon */
+    height: 30px; /* Adjust the size of the icon */
+    margin-right: 10px;  /* Space between the icon and the text */
+    transition: transform 0.3s ease;
+}
+
+.day-icon:hover {
+    transform: scale(1.1);  /* Slight zoom effect on hover */
+}
+
+/* Day Text Styles */
+#day-text {
+    font-size: 18px;  /* Adjust the size of the text */
+    font-weight: 600;
+    color: #fff;
+}
+
+
+/* Todo App Styles */
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 20px auto;
+    padding: 40px 30px 70px;  /* Padding on all sides */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow */
+}
+
+/* Header Styles for h2 */
+h2 {
+    font-size: 28px;  /* Adjust font size */
+    color: #4e085f;  /* Dark color for contrast */
+    margin-bottom: 20px;  /* Space between text and content below */
+    display: flex;
+    align-items: center;  /* Vertically aligns the text and image */
+    padding-top: 0;  /* Remove extra top padding */
+    padding-bottom: 0;  /* Remove any unwanted bottom padding */
+    text-align: left; /* Aligns text to the left */
+}
+
+/* Image inside h2 */
+h2 img {
+    width: 60px;  /* Adjust icon size */
+    height: 60px;  /* Adjust icon size */
+    object-fit: contain;
+    margin-left: 10px;  /* Adds space between text and image */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .todo-app {
+        width: 90%;
+        margin: 50px auto;
+        padding: 30px;
+    }
+    h2 img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Hover Effect for Todo App */
+.todo-app:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+/* Timer Section Styles */
+/* Timer Section Styles */
+#timer-section {
+    position: absolute;  /* Position it absolutely relative to the container */
+    top: 20px;           /* Adjust the top position if needed */
+    right: 20px;         /* Align it to the right-hand side */
+    background: rgba(255, 255, 255, 0.1);  /* Transparent background */
+    border-radius: 15px;  /* Rounded corners */
+    padding: 15px 20px; /* Adjust padding to make the section smaller */
+    text-align: center;
+    width: 280px;  /* Set a fixed width (optional, adjust as needed) */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for depth */
+}
+
+/* Timer display (Font size for the timer) */
+#timer-display {
+    font-size: 28px;  /* Smaller font size */
+    font-weight: bold;
+    margin-top: 10px;
+    color: #d7a7e3;
+}
+
+/* Task name (Font size) */
+#task-name {
+    font-size: 18px;  /* Smaller font size for task name */
+    font-weight: normal;
+    color: #fff;
+}
+
+/* Start Timer Button */
+#start-timer {
+    background-color: #6ff974;  /* Green color for start button */
+    padding: 10px 20px;  /* Adjust button size */
+    font-size: 14px;  /* Smaller font size for the button */
+}
+
+/* Reset Timer Button */
+#reset-timer {
+    background-color: #f86055;  /* Red color for reset button */
+    padding: 10px 20px;  /* Adjust button size */
+    font-size: 14px;  /* Smaller font size for the button */
+}
+
+
+#reset-timer:hover {
+    background-color: #da3431;  /* Darker red on hover */
+}
+
+/* Hover effect for all buttons */
+button:hover {
+    transform: scale(1);  /* Slightly increase the size on hover */
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDVpnzGpBg4dHWyEo1K4LoYWdybb9AEYnxsg&s');
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url('https://cdn-icons-png.freepik.com/256/8930/8930477.png?semt=ais_hybrid');
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    background: #edeef0;
+}
+
+
+/* Updated "Focus on" section styles */
+#task-name {
+    font-size: 24px;  /* Font size for task name */
+    font-weight: 600;  /* Make the text bold */
+    color: #ffffff;  /* White text color */
+    margin-top: 10px;  /* Space between task name and timer */
+    margin-bottom: 20px;  /* Space below the task name */
+    text-align: center;  /* Center the task name text */
+}
+
+#active-task {
+    font-size: 30px;  /* Increase the size for active task */
+    font-weight: 700;  /* Bold text for active task */
+    color: #ff6f61;  /* Bright color for active task */
+    transition: color 0.3s ease-in-out;  /* Smooth color transition */
+}
+
+/* Optional: Make the "Focus on" section stand out more */
+#timer-section {
+    background: rgba(255, 255, 255, 0.1);  /* Transparent background */
+    border-radius: 15px;  /* Rounded corners */
+    padding: 10px;
+    text-align: center;
+}
